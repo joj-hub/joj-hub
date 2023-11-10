@@ -161,7 +161,7 @@ function spawnEnemies() {
 
             enemies.push(new Enemy(x, y, radius, color, velocity))
         }  
-    }, 50)
+    }, 250)
 }
 
 let animationId
@@ -190,7 +190,7 @@ function animate() {
             projectiles.splice(index, 1)
         }
     }
-    const cooldownMax = 1
+    const cooldownMax = 7
     cooldownInterval++
     if (mouseDown && cooldownInterval >= cooldownMax) {
         const angle = Math.atan2(clientY - canvas.height / 2, clientX - canvas.width / 2)
